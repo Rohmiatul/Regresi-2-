@@ -4,10 +4,10 @@ import joblib # Menggunakan joblib
 
 # Memuat model regresi yang sudah dilatih
 try:
-    with open('regresi.joblib', 'rb') as file: # Sesuaikan nama file jika Anda menyimpannya sebagai .pkl
+    with open('regresi.pkl', 'rb') as file: # Sesuaikan nama file jika Anda menyimpannya sebagai .pkl
         model = joblib.load(file)
 except FileNotFoundError:
-    st.error("File 'regresi.joblib' tidak ditemukan. Pastikan model berada di direktori yang sama.")
+    st.error("File 'regresi.pkl' tidak ditemukan. Pastikan model berada di direktori yang sama.")
     st.stop()
 except Exception as e:
     st.error(f"Terjadi kesalahan saat memuat model: {e}")
